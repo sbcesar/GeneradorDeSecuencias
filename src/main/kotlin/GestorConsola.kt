@@ -6,8 +6,13 @@ class GestorConsola : IGestorEntradaSalida{
         if (salto) println(mensaje) else print(mensaje)
     }
 
-    override fun pedirNumero(mensaje: String, salto: Boolean): Int? {
-        mostrarMensaje(mensaje,false)
-        return readln().toIntOrNull()
+    override fun obtenerEntero(mensaje: String, salto: Boolean): Int {
+        var numero: Int?
+        do {
+            mostrarMensaje(mensaje,false)
+            numero = readln().toIntOrNull()
+        } while (numero == null)
+
+        return numero
     }
 }

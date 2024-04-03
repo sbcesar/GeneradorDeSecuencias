@@ -3,8 +3,7 @@ package org.example
 fun main() {
     val gestorConsola = GestorConsola()
     val generadorSecuencia = GeneradorSecuencias(gestorConsola)
+    val menu = Menu(gestorConsola,generadorSecuencia)
 
-    val numeroDePalabras = gestorConsola.mostrarMensaje("Introduce el numero de palabras: ", true)
-
-    if (numeroDePalabras)
+    menu.menu()
 }
