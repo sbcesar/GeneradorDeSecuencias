@@ -1,5 +1,10 @@
 package org.example
 
 fun main() {
-    println("Hello World!")
+    val gestorConsola = GestorConsola()
+    val generadorSecuencia = GeneradorSecuencias(gestorConsola)
+
+    val numeroDePalabras = gestorConsola.mostrarMensaje("Introduce el numero de palabras: ", true)
+
+    if (numeroDePalabras)
 }
